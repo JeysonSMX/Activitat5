@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Àrea Client | Apex Motors</title>
+    <meta name="description" content="Gestiona el teu perfil de soci del club Apex Motors i actualitza la teva contrasenya de seguretat.">
+    <meta name="author" content="El Teu Nom i Cognoms">
+    <meta name="keywords" content="compte client, seguretat, contrasenya, club esportius">
+    <link rel="stylesheet" href="css/estils.css">
+</head>
+<body>
+    <header>
+        <h1>APEX MOTORS</h1>
+        <p>Configuració de seguretat del Club VIP</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inici</a></li>
+                <li><a href="models.html">Galeria de Models</a></li>
+                <li><a href="compte.html" class="actiu">Àrea Client</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="targeta">
+            <h2>Canvi de contrasenya</h2>
+            <p>Introdueix la nova contrasenya dues vegades. Ha de tenir un mínim de 8 caràcters.</p>
+
+            <!-- Exercici 4: Formulari amb 2 camps de password -->
+            <form class="formulari-clau">
+                <label for="pass1">Nova contrasenya:</label>
+                <input type="password" id="pass1" name="pass1" required>
+
+                <label for="pass2">Repeteix la contrasenya:</label>
+                <input type="password" id="pass2" name="pass2" required>
+
+                <button type="button" onclick="comprovarContrasenya()">Guardar contrasenya</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Apex Motors - Pràctica HTML5, CSS3 i JavaScript</p>
+    </footer>
+
+    <script>
+        // Exercici 4: Validació de contrasenyes en el <body>
+        function comprovarContrasenya() {
+            const p1 = document.getElementById("pass1").value;
+            const p2 = document.getElementById("pass2").value;
+
+            if (p1.length < 8) {
+                alert("Error: La contrasenya ha de tenir un mínim de 8 caràcters de longitud.");
+            } else if (p1 !== p2) {
+                alert("Error: Les dues contrasenyes no coincideixen.");
+            } else {
+                alert("S'ha canviat correctament la contrasenya");
+            }
+        }
+    </script>
+</body>
+</html>
