@@ -96,8 +96,8 @@ main {
 /* Galeria de 6 miniatures */
 .graella-miniatures {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
     margin-top: 20px;
 }
 
