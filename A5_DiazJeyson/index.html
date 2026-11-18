@@ -53,13 +53,13 @@
         </section>
 
         <!-- Exercici 2: Secció amb onmouseover i onmouseout -->
-        <section id="seccioInteractiva" class="targeta seccio-normal" onmouseover="ressaltarSeccio()" onmouseout="restaurarSeccio()">
-            <h2>Tecnologia Aerodinàmica Activa (Passa el ratolí per aquí)</h2>
-            <p>Els superesportius moderns utilitzen alerons mòbils i difusors intel·ligents per maximitzar l'adherència en cada revolt.</p>
-            <p id="paragrafOcult" class="ocult">
-                <strong>Dada tècnica exclusiva:</strong> A 300 km/h, un aleró actiu pot generar més de 800 kg de càrrega aerodinàmica (downforce), permetent prendre revolts a forces superiors a 2G.
-            </p>
-        </section>
+        <section id="seccioInteractiva" class="targeta" onmouseover="ressaltarSeccio()" onmouseout="restaurarSeccio()">
+    <h2 id="titolInteractiu">Tecnologia Aerodinàmica Activa</h2>
+    <p>Passa el cursor del ratolí per sobre d'aquesta secció per realçar-la i descobrir informació tècnica addicional.</p>
+    <p id="paragrafOcult" class="ocult">
+        <strong>Dada tècnica:</strong> A 300 km/h, un aleró actiu pot generar més de 800 kg de càrrega aerodinàmica per mantenir el cotxe enganxat a l'asfalt en revolts ràpids.
+    </p>
+</section>
     </main>
 
     <footer>
@@ -67,22 +67,27 @@
     </footer>
 
     <script>
-        // Exercici 2: Funció en el <body> per canviar colors i mostrar/ocultar el paràgraf
-        function ressaltarSeccio() {
-            const seccio = document.getElementById("seccioInteractiva");
-            const textOcult = document.getElementById("paragrafOcult");
-            seccio.style.backgroundColor = "#e63946";
-            seccio.style.color = "#ffffff";
-            textOcult.style.display = "block";
-        }
+    function ressaltarSeccio() {
+        const seccio = document.getElementById("seccioInteractiva");
+        const titol = document.getElementById("titolInteractiu");
+        const textOcult = document.getElementById("paragrafOcult");
 
-        function restaurarSeccio() {
-            const seccio = document.getElementById("seccioInteractiva");
-            const textOcult = document.getElementById("paragrafOcult");
-            seccio.style.backgroundColor = "#1e1e24";
-            seccio.style.color = "#f1f1f1";
-            textOcult.style.display = "none";
-        }
-    </script>
+        seccio.style.backgroundColor = "#e63946";
+        seccio.style.color = "#ffffff";
+        titol.style.color = "#ffffff";
+        textOcult.style.display = "block";
+    }
+
+    function restaurarSeccio() {
+        const seccio = document.getElementById("seccioInteractiva");
+        const titol = document.getElementById("titolInteractiu");
+        const textOcult = document.getElementById("paragrafOcult");
+
+        seccio.style.backgroundColor = "#1e1e24";
+        seccio.style.color = "#f1f1f1";
+        titol.style.color = "#ff4d5a";
+        textOcult.style.display = "none";
+    }
+</script>
 </body>
 </html>
